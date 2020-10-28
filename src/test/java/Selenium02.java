@@ -21,7 +21,8 @@ public class Selenium02 {
 
     @AfterEach
     public void driverQuit() {
-        driver.quit();
+        driver.close();
+//        driver.quit();
     }
 
     @Test
