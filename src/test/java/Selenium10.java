@@ -1,14 +1,3 @@
-//Przejdź na stronę http://wikipedia.pl
-//Napisz trzy asercje:
-//porównaj tytuł strony z oczekiwanym;
-//porównaj URL strony z oczekiwanym;
-//znajdź w konsoli deweloperskiej (F12) w zakładce Elements jakiś fragment źródła strony, który mówi o tym w jakiej wersji językowej jest strona; użyj tego fragmentu źródła do asercji.
-//Zmień język strony na hiszpański (By.cssSelector("a[title='hiszpański']")).
-//Napisz trzy asercje:
-//porównaj tytuł strony z oczekiwanym;
-//porównaj URL strony z oczekiwanym;
-//znajdź w konsoli deweloperskiej (F12) w zakładce Elements jakiś fragment źródła strony, który mówi o tym w jakiej wersji językowej jest strona; użyj tego fragmentu źródła do asercji.
-
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
