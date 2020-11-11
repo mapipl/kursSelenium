@@ -52,19 +52,19 @@ public class Selenium39 {
     @Test
     public void emptyCouponTest() {
         applyCoupon("");
-        Assertions.assertEquals(getAlertText(), "Proszę wpisać kod kuponu.", "Alert message was not what expected.");
+        Assertions.assertEquals("Proszę wpisać kod kuponu.", getAlertText(), "Alert message was not what expected.");
     }
 
     @Test
     public void incorectCouponTest() {
         applyCoupon(incorrectCoupon);
-        Assertions.assertEquals(getAlertText(), "Kupon \"" + incorrectCoupon + "\" nie istnieje!", "Alert message was not what expected.");
+        Assertions.assertEquals("Kupon \"" + incorrectCoupon + "\" nie istnieje!", getAlertText(), "Alert message was not what expected.");
     }
 
     @Test
     public void correctCouponTest() {
         applyCoupon(correctCoupon);
-        Assertions.assertEquals(getAlertText(), "Kupon został pomyślnie użyty.", "Alert message was not what expected.");
+        Assertions.assertEquals("Kupon został pomyślnie użyty.", getAlertText(), "Alert message was not what expected.");
     }
 
     @Test
@@ -73,7 +73,7 @@ public class Selenium39 {
         waitForProcessingEnd();
         applyCoupon(correctCoupon);
         waitForProcessingEnd();
-        Assertions.assertEquals(getAlertText(), "Kupon został zastosowany!", "Alert message was not what expected.");
+        Assertions.assertEquals("Kupon został zastosowany!", getAlertText(), "Alert message was not what expected.");
     }
 
     @Test
@@ -83,7 +83,7 @@ public class Selenium39 {
         By removeLink = By.cssSelector("a.woocommerce-remove-coupon");
         wait.until(ExpectedConditions.elementToBeClickable(removeLink)).click();
         waitForProcessingEnd();
-        Assertions.assertEquals(getAlertText(), "Kupon został usunięty.", "Alert message was not what expected.");
+        Assertions.assertEquals("Kupon został usunięty.", getAlertText(), "Alert message was not what expected.");
     }
 
     private void applyCoupon(String coupon) {
